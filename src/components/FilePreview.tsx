@@ -205,7 +205,9 @@ export default function FilePreview({ uploadedFile, onRemove }: FilePreviewProps
               />
             )}
 
-            {metadata.gps && metadata.gps.latitude && metadata.gps.longitude && (
+            {metadata.gps &&
+              metadata.gps.latitude !== undefined &&
+              metadata.gps.longitude !== undefined && (
               <MetadataCard
                 title="GPS"
                 icon={
